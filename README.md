@@ -24,17 +24,20 @@ School Grading CLI
 
 ```mermaid
     flowchart LR
-    A((Start))-->B(Ask for Student)
+    A-->H(Print Student List)
+    H-->B
+    A((Start))
+    B{Ask for Student}
     G-->B
-    B-->|create Student|G(Add New Student)
-    B-->C
-    C--->|change Student|B
-    C{User\nInput}
-    C-->|Add Grade|D(Append Grade)
-    C-->|Change Grade|E(Update/Change Grade)
-    C-->|calculate Garde|F(Print Out the Average Grade)
+    B-->|create new Student|G(Add New Student\nto List)
+    B-->|choose Student Student|C
+    C--->|close Student Menu|B
+    C{What to do\nwith Student}
+    C-->|Userinput: A|D(Append Grade)
+    C-->|Userinput: C|E(Update/Change Grade)
+    C-->|Userinput: R|F(Print Out the Average Grade)
     D--->C 
     E--->C 
     F--->C
-    C-->|Userinput: X|X(Exit)
+    C-->|Userinput: X|X(Exit Program)
 ```
