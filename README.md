@@ -30,7 +30,7 @@ School Grading CLI
     B{Ask for Student}
     G-->B
     B-->|create new Student|G(Add New Student\nto List)
-    B-->|choose Student Student|C
+    B-->|choose Student|C
     C--->|close Student Menu|B
     C{What to do\nwith Student}
     C-->|Userinput: A|D(Append Grade)
