@@ -27,13 +27,13 @@ School Grading CLI
     A-->H(Print Student List)
     H-->B
     A((Start))
+    I-->|Userinput: X|X(Exit Program)
     B(Ask for Student)
     B-->I{Is there \nStudent?}
     G-->H
-    I--->|create new Student|G(Create & Add New Student\nto List)
+    I--->|No|G(Create & Add New Student\nto List)
     I-->|yes|J(Open Student Menu)
     J-->C
-
     C--->|close Student Menu|H
     C{What to do\nwith Student}
     C-->|Userinput: A|D(Append Grade)
@@ -42,5 +42,4 @@ School Grading CLI
     D--->C 
     E--->C 
     F--->C
-    C-->|Userinput: X|X(Exit Program)
 ```
