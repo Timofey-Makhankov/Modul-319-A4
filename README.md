@@ -2,6 +2,12 @@
 
 School Grading CLI
 
+## Requirements
+
+- able to Add new Student
+- Update or add Grade to a Student
+- calculate average Grade of student
+
 ## Student Object
 
 ```mermaid
