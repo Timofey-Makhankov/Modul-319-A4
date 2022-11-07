@@ -27,11 +27,14 @@ School Grading CLI
     A-->H(Print Student List)
     H-->B
     A((Start))
-    B{Ask for Student}
-    G-->B
-    B-->|create new Student|G(Add New Student\nto List)
-    B-->|choose Student|C
-    C--->|close Student Menu|B
+    B(Ask for Student)
+    B-->I{Is there \nStudent?}
+    G-->H
+    I--->|create new Student|G(Create & Add New Student\nto List)
+    I-->|yes|J(Open Student Menu)
+    J-->C
+
+    C--->|close Student Menu|H
     C{What to do\nwith Student}
     C-->|Userinput: A|D(Append Grade)
     C-->|Userinput: C|E(Update/Change Grade)
